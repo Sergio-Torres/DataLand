@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang= "en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>DataLand</title>
+        {%load static %}
+        <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    </head>
+
+    <body>
+        <div class="box">
+
+            <form method = "POST" action="">
+                {%csrf_token%}
+                <p>{{form.username.label}}</p>
+                {{form.username}}
+
+                <p>{{form.email.label}}</p>
+                {{form.email}}
+                {{form.errors}}
+                <p>{{form.password1.label}}</p>
+                {{form.password1}}
+
+                <p>{{form.password2.label}}</p>
+                {{form.password2}}
+
+                <input type="submit" name="Creater User" value="Register Account">
+                
+                <p>Already have an account? <a href="{%url 'login'%}">Login</a></p>
+            </form>
+        <div>
+    <body>
+</html>

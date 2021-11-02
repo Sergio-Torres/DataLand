@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+body{    
+    font-family: 'Oswald', sans-serif;
+    background: rgb(241,241,241);
+   
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+
+/*navigation*/
+.nav-main{
+    font-size: 20px;
+    background: rgb(41, 41, 41);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 20px 0;
+    
+}
+
+.nav-main ul{
+    display: flex;
+}
+.nav-main ul.list{
+    flex: 1;
+    padding-top: 10px;
+}
+.nav-main h1{
+    margin: 20px;
+    color: #fff;
+}
+.nav-main ul.list li{
+    padding: 10px;
+}
+.nav-main ul li a:hover{
+    border-bottom: 2px solid #ffffff;
+}
+
+.container .nav-main .logout button{
+    border: none;
+    background: none;
+    display: block;
+    float: right;
+    margin: 20px;
+    width: 50px;
+    height: 40px;
+    border-radius: 24px;
+    transition: 0.25s;
+    border-radius: 10px
+
+}
+.container .nav-main .logout button i{
+    font-size: 20px;
+    color: #fff;
+}
+.container .nav-main .logout button:hover{
+    background: rgb(255, 0, 0);
+
+}
+/*form*/
+.container .form{
+    position: absolute;
+    top: 6%;
+    left: 22.5%;
+    margin: 100px 100px 0 70px;
+    width: 600px;
+    height: 500px;
+    background: #AED6F1;
+    padding: 30px 20px;
+}
+/*form title and descripcion*/
+
+.container .form input[type="text"]{
+    display: flex;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+
+}
+.container .form .title input[type="text"]{
+    height: 30px;
+
+}
+.container .form .description input[type="text"]{
+    border-radius: 15px;
+    height: 70px;
+
+}
+/*table form*/
+.container table{
+    margin: 50px 70px 0 75px;
+}
+table, th, td {
+  
+    border: 1px solid black;
+}
+.container table th{
+    border-collapse: collapse;
+}
+.container .form .table .thead{
+    background: #000;
+    color: #fff;
+}
+.container .form .table .thead th{
+    
+    color: #fff;
+}
+
+/*button run*/
+.container .form .run{
+    border: 0;
+    background: #1ab45a;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    padding: 14px 50px;
+    outline : none;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+/*sidebar*/
+
+.container .sidebar{
+    background:#e7f150;
+    display: none;
+    width: 300px;
+    height: 100%;
+    float: right;
+    
+
+    
+}
+.container .sidebar header{
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    background:#eff873;
+    user-select: none;
+    line-height: 50px;
+    
+}
+.container .sidebar header .delete{
+    font-size: 20px;
+    color: #fff;
+    background: #fc9f61;
+    width: 100%;
+    height: 70px;
+}
+.container .sidebar header .delete input[type ="submit"]{
+    
+    background: red;
+    border: none;
+    margin: 10px 25%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 40px;
+    outline : none;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+}
+.container .sidebar ul li{
+    display: block;
+    margin: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #eff873;
+    border-bottom: 1px solid #d4b817;
+    
+}
+.container .sidebar ul li:hover{
+    padding-left:30px;
+}
+.container .sidebar a{
+    color: #000;
+    font-size: 20px;
+}
+.container .sidebar p{
+    color: rgb(43, 43, 43);
+}
+#cancel{
+    float:left;
+    padding: 15px;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .sidebar{
+    transition: display 4s;
+    display: block;
+    
+
+}
+
+i #check:checked ~ .sidebar{
+    
+    display: none;   
+}
+   

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>DataLand</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+        {%load static %}
+        <link rel="stylesheet" href="{% static 'css/workz.css'%}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    </head>
+    <body>
+        
+        <div class="container">
+            <!---menu-->
+            <nav class="nav-main">
+                <h1>Dataland</h1>
+                <ul class="list">
+                    <li>
+                        <a href="#">Graph examples</a> 
+                    </li>
+                    <li> 
+                        <label for="check">
+                            Records
+                        </label>
+                    </li>
+                    <li>
+                        <a href="#">Equations</a> 
+                    </li>
+                </ul>
+                <ul class="logout">
+                    <li>
+                        <button><a href="{%url 'logout'%}"><i class="fas fa-door-open"></i></a></button>
+                    </li>
+                </ul>
+            </nav>
+            <!--form-->
+            <div class="form">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="title">
+                        <p>{{form.title.label}}</p>
+                        {{ form.title}}
+                    </div>
+                    <div class="description">
+                        <p>{{form.description.label}}</p>
+                        {{ form.description}}
+                    </div>
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th>X</th>
+                                <th>Y</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>{{form.x1.label}}{{form.x1}}</td>
+                                <td>{{form.y1.label}}{{form.y1}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{form.x2.label}}{{form.x2}}</td>
+                                <td>{{form.y2.label}}{{form.y2}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{form.x3.label}}{{form.x3}}</td>
+                                <td>{{form.y3.label}}{{form.y3}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{form.x4.label}}{{form.x4}}</td>
+                                <td>{{form.y4.label}}{{form.y4}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{form.x5.label}}{{form.x5}}</td>
+                                <td>{{form.y5.label}}{{form.y5}}</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>                     
+                    <input type="submit" class="run" value="Run">
+                </form>
+            </div>
+            <!--sidebar-->
+            <input type="checkbox" id="check">
+            <div class="sidebar">
+                <header>
+                    All your projects
+                    <label for="check">
+                        <i class="fas fa-window-close" id="cancel" ></i>
+                    </label>
+                    <div class="delete">
+                        <form action="" method="POST">
+                            {% csrf_token %} 
+                            <input type="submit" value="Delete all records">
+                        </form>
+                    </div>
+                </header>
+                {%if graphs%}
+                    <ul>
+                        {%for graph in graphs%}
+                            <li>
+                                <a href="#">{{graph.title}}</a>
+                                <p>{{graph.description}}</p>
+                            </li>
+                        {%endfor%}
+                     </ul>
+                {%else%}
+                    <p>you are not projects</p>
+                {%endif%}
+                
+            </div>
+            
+
+        </div>
+        
+    </body>
+</html>
