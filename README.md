@@ -5,9 +5,7 @@ registration and login to access this function, for now only working with 5 coor
 In the future (since it is still in development) it is expected to be able to create graphs with various coordinates, 
 equations and loaded files (such as .csv, for example). 
 
-I don't have an npm install or a npm run build yet, because at the moment I don't know how to implement them.
-
-With this clarified, if you want to use the application you should take into account that it uses technologies such as:
+If you want to use the application you should take into account that it uses technologies such as:
 
 * Django - Python
 * Bokeh - Python (to create the graphics in the browser)
