@@ -10,6 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
         <!--Css-->
         <link rel="stylesheet" href="{% static 'css/home.css'%}">
+
+        <script src="{%static 'typescript/public/index.js'%}"> </script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
     <body>
@@ -35,22 +37,22 @@
             </nav>
             <p>Dataland is a page that allows you to create graphs based on the python bokeh library, for now it only allows you to practice with the data it receives in the table, in the future you will be able to load files on the page (such as .csv, .dat , .txt, etc) and also graph times, for now enjoy what we have.</p>
             <button class="start"><a href="{%url "login"%}">Start</a></button>
-            
+        <!--            
             <div class="img" style=text-align:center;"">
-                {%load static %}
+               {//%load static %}
                     <div class="graph1">
                         <h2>Traditional graph</h2>
-                        <a href="{%url 'graph1View'%}"><img src="{% static 'img/graph1.png' %}"></a> 
+                        <a href="{//%url 'graph1View'%}"><img src="{% static 'img/graph1.png' %}"></a> 
                         <p>You can find traditional graphs, which are used for simple activities, such as the results of mathematical functions.</p>
                     </div>
                     <div class="graph2">
                         <h2>Stacked area plot</h2>
-                        <a href="{%url 'graph2View'%}"><img src="{% static 'img/graph2.png' %}"></a> 
+                        <a href="{//%url 'graph2View'%}"><img src="{//% static 'img/graph2.png' %}"></a> 
                         <p>Stacked area plot are useful for highlighting the magnitude of change over time. Stacked area charts are also used to show the relationship of parts to the whole. Area charts are like line charts that have areas below the lines filled with colors or patterns.</p>
                     </div>
                     <div class="graph3">
                         <h2>Line marker plot</h2>
-                        <a href="{%url 'graph3View'%}"><img src="{% static 'img/graph3.png' %}"></a> 
+                        <a href="{//%url 'graph3View'%}"><img src="{//% static 'img/graph3.png' %}"></a> 
                         <p>Line and marker plots are used to represent large amounts of data that take place over a continuous period of time.</p>
                     </div>
                     <div class="graph4">  
@@ -58,7 +60,7 @@
                         <a href="{%url 'graph4View'%}"><img src="{% static 'img/graph4.png' %}"></a> 
                         <p>The scatter diagram is one of the basic quality control tools, which also include the histogram, Pareto chart, check sheet, control charts, Ishikawa chart, and flow chart.</p>
                     </div>
-            </div>
+            </div>-->
             <div class="social">
                 <ul>
                     <li>
